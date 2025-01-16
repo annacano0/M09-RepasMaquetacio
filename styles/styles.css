@@ -11,18 +11,106 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-  height: 4em;
-}
-
 img {
   width: 100%;
   height: 100%;
 }
 
-/*card styles*/
+section {
+  margin: 2em 0em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*HEADER STYLING*/
+
+header {
+  display: flex;
+  height: 3em;
+  padding: 0.5em;
+}
+
+.logo {
+  padding: 1em;
+  margin: auto;
+}
+
+nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+/*featured film section*/
+/*TODO: hacer que esto tambien sea grid/responsive*/
+
+.featured-movie-section {
+  background-image: url("../img/true-detective-background.jpg");
+  background-repeat: no-repeat;
+  box-shadow: inset 10em 10em 40em rgb(29, 29, 29);
+  padding: 2em 1.5em;
+}
+
+.featured-movie-container {
+  display: flex;
+  gap: 2em;
+}
+
+.featured-movie-section h1 {
+  color: red;
+  margin-bottom: 1em;
+}
+
+/*film gallery*/
 
 .film-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.film-card h3 {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: rgb(165, 6, 6);
+  text-transform: uppercase;
+  text-shadow: 0.1em 0.1em 0.5em black;
+}
+
+.film-card img {
   width: 14em;
   overflow: hidden;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.film-card img:hover {
+  transition: all 0.3s;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+/*big screen settings*/
+
+.film-gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+/*tablet settings*/
+@media (max-width: 1250px) {
+  .film-gallery-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*phone settings*/
+
+@media (miaxwidth: 460px) {
+  .film-gallery-container {
+    grid-template-columns: 1fr;
+  }
 }
