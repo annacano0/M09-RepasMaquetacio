@@ -2,3 +2,27 @@
   margin: 0px;
   padding: 0px;
 }
+
+/*GENERAL STYLES*/
+
+body {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 4em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/*card styles*/
+
+.film-card {
+  width: 14em;
+  overflow: hidden;
+}
